@@ -1,8 +1,14 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class CalebCurryMed {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
-       /* Scanner input = new Scanner(System.in);
+       /*Scanner input = new Scanner(System.in);
         System.out.println("Enter name");
         String s = input.nextLine();
 
@@ -14,23 +20,37 @@ public class CalebCurryMed {
           System.out.println(input + ", you are not welcome here");
       }*/
 
-      int i = 0;
 
-      do {
-          System.out.println("I is " + i);
-          i++;
-      }
-      while (false);
+       Scanner input = new Scanner(new File("students.txt"));// collections from file directly
+       /* System.out.println("Give us a size:");
+
+       int size = input.nextInt();
+        System.out.println("Enter : " + size + " numbers. Press enter after each");
+
+       int [] grades = new int[size];
+     for (int i = 0; i < size;i++){
+         grades[i] = input.nextInt();
+
+     }*/
+
+       List<String> students = new ArrayList<String>();
+
+       while (input.hasNextLine()){
+           students.add(input.nextLine());
+           System.out.println(input.nextLine());
+       }
+
+       for (int i = 0; i < students.size();i++){
+           System.out.println("name: " + students.get(i));
+       }
+
+        input.close();
+
+    /* for (int i = 0; i < size;i++){
+         System.out.println(grades[i]);
+     }*/
 
 
-
-      for (int j = 0; j < 10; j++){
-          System.out.println("j is " +j);
-      }
-
-
-
-     // input.close();
 
     }
 }
