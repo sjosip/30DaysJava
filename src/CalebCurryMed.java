@@ -1,39 +1,25 @@
-import java.util.LinkedList;
-import java.util.ListIterator;
-
 public class CalebCurryMed {
 
 
     public static void main(String[] args)  {
 
+        // MULTI DIMENSIONAL ARRAYS
+        int [][] data =  {
+                {4 ,6, 3, 10},
+                {4, 2, 40, 1, 98, 52},
+                {5, 31, 1, 43}
+        };
+        //data[1][2] = 49;
+        //System.out.println(data[1][2]);
+        System.out.println(data.length);
+        System.out.println(data[0].length);
 
-        // Iterator
-        LinkedList<String> names = new LinkedList<String>();
-        names.push("Caleb");
-        names.push("Cobra");
-        names.push("Doris");
-
-        //Iterator <String> iterator = names.iterator();
-        ListIterator <String> iterator = names.listIterator();
-       /* System.out.println(iterator.next());// last
-        System.out.println(iterator.next());// second
-        System.out.println(iterator.next());//first*/
-
-       iterator.next();
-       iterator.next();
-       iterator.add("Jerry");
-
-        names.add(2, "Lenny");
-
-       /* while (iterator.hasNext()){
-            System.out.println(iterator.next());
-        }*/
-
-        //OR ova ili ona petlja rade isto
-
-        // for each element in the array
-        for (String s: names) {
-            System.out.println(s);
+        for (int i = 0; i < data.length;i++){
+            for (int j = 0; j < data[i].length;j++){
+                System.out.print(data[i][j] + " ");
+            }
+           // System.out.println("row index " + i);
+            System.out.println();
         }
 
     }
